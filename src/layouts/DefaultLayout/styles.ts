@@ -3,12 +3,12 @@ import styled from "styled-components";
 import back from "../../assets/background.png"
 
 export const LayoutContainer = styled.div`
-  height: 100vh;
+  height: calc(100vh);
+  padding: 6.4rem;
   min-width: 100vw;
-  background: url(${back}) right top / contain no-repeat ;
-
+  background: url(${back}) right top / contain no-repeat ;  
   @media(max-width: 840px){
-    background-size: cover;
+    background: none;
   }
 
 `
