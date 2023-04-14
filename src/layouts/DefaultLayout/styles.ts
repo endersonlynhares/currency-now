@@ -14,6 +14,7 @@ export const LayoutContainer = styled.div`
 
   @media(max-width: 840px){
     background: none;
+    align-items: center;
   }
 
 `
