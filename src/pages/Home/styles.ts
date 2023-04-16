@@ -22,7 +22,7 @@ export const FormContainer = styled.form`
     cursor: pointer;
 
     &:hover{
-      background: ${props => props.theme.colors["--secondary-500"]};
+      background: ${props => props.theme.colors["--primary"]};
     }
   }
 `

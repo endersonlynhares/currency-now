@@ -3,7 +3,7 @@ import { FormContainer, CurrencyBlock, RadioBlock } from "./styles"
 
 export const Home = () => {
   return (
-    <FormContainer>
+    <FormContainer >
       <CurrencyBlock>
         <div>
           <label htmlFor="">Dólar: </label>
