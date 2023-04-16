@@ -18,15 +18,20 @@
 
 <table align="center">
   <tr>
-    <th colspan="2">Application Creation Time ⏱</th>
+    <th colspan="3">Application Creation Time ⏱</th>
   </tr>
   <tr>
     <td>13/04/2023</td>
-    <td> 5:17:45 PM - 6:10:50 PM </td>
+    <td colspan="2" align="center"> 5:17 PM - 6:10 PM </td>
   </tr>
   <tr>
     <td>14/04/2023</td>
-    <td> 1:56:15 PM - 4:05:43 PM </td>
+    <td colspan="2" align="center"> 1:56 PM - 4:05 PM </td>
+  </tr>
+  <tr >
+    <td>16/04/2023</td>
+    <td> 1:15 PM - 2:22 PM </td>
+    <td> 6:30 PM - 8:01 PM </td>
   </tr>
 
 </table>
