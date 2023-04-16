@@ -9,7 +9,8 @@ export const FormContainer = styled.form`
   button{
     width: 14.9rem;
     height: 4.9rem;
-    background: ${props => props.theme.colors["--secondary"]};
+    background: ${props => props.theme.colors["--primary"]};
+
     border-radius: 4px;
     border: none;
     display: flex;
@@ -21,8 +22,13 @@ export const FormContainer = styled.form`
     transition: background 0.3s;
     cursor: pointer;
 
-    &:hover{
+    /* &:hover{
       background: ${props => props.theme.colors["--primary"]};
+    } */
+
+    &:disabled{
+      background: ${props => props.theme.colors["--secondary"]};
+      opacity: 0.6;
     }
   }
 `
