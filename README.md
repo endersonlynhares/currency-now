@@ -33,7 +33,10 @@
     <td> 1:15 PM - 2:22 PM </td>
     <td> 6:30 PM - 8:01 PM </td>
   </tr>
-
+  <tr>
+    <td align="center" colspan="3"> Approximately 6 hour of production🏭 </td>
+  </tr>
+  
 </table>
 
 ## 🚀 Technologies
