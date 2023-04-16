@@ -2,11 +2,14 @@ import { ThemeProvider } from "styled-components"
 import { light } from "./styles/themes/light"
 import { GlobalStyle } from "./styles/global"
 import { Router } from "./routers"
+import { PriceAPIProvider } from "./contexts/PriceAPI"
 
 function App() {
   return (
     <ThemeProvider theme={light}>
-      <Router />
+      <PriceAPIProvider>
+        <Router />
+      </PriceAPIProvider>
       <GlobalStyle />
     </ThemeProvider>
   )

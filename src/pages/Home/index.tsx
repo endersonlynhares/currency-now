@@ -3,13 +3,16 @@ import { FormContainer, CurrencyBlock, RadioBlock } from "./styles"
 import { useForm } from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
 import * as zod from "zod"
-import { useState } from "react"
+import { useContext } from "react"
+import { PriceAPI } from "../../contexts/PriceAPI"
 
 const ConvertMoneyValidationSchema = zod.object({
   money: zod.string().refine(value =>{
     return /^(\d{1,3}(,\d{3})*|(\d+))(\.\d{2})?$/.test(value);
   }, "Digite um valor monetário válido"),
-  tax: zod.number(),
+  tax: zod.string().refine(value =>{
+    return /^(\d{1,3}(,\d{3})*|(\d+))(\.\d{2})?$/.test(value);
+  }, "Digite um valor real válido"),
   type: zod.enum(['money', 'card'])
 })
 
@@ -17,12 +20,14 @@ type ConvertMoneyFormInputs = zod.infer<typeof ConvertMoneyValidationSchema>
 
 export const Home = () => {
 
-  const {register, handleSubmit, watch ,formState} = useForm<ConvertMoneyFormInputs>({
+  const {register, handleSubmit, watch} = useForm<ConvertMoneyFormInputs>({
     resolver: zodResolver(ConvertMoneyValidationSchema),
   })
 
+  const {getData} = useContext(PriceAPI)
+
   const onSubmit = (data: ConvertMoneyFormInputs) =>{
-    console.log(data)
+    getData(data)
   }
 
   const tax = (watch('tax'))
@@ -33,11 +38,11 @@ export const Home = () => {
       <CurrencyBlock>
         <div>
           <label htmlFor="">Dólar: </label>
-          <input type="string" {...register('money')} placeholder="$ 0.00" required/>
+          <input type="text" {...register('money')} placeholder="$ 0.00" required/>
         </div>
         <div>
           <label htmlFor="">Taxa do Estado: </label>
-          <input type="number" {...register('tax', { valueAsNumber: true })} placeholder="0 %" required />
+          <input type="text" {...register('tax')} placeholder="0 %" required />
         </div>
       </CurrencyBlock>
       <RadioBlock>

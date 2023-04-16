@@ -7,7 +7,7 @@ export const Header = () =>{
     <HeaderContainer>
       <img src={logo} alt="" />
       <div>
-        <span>14 de janeiro 2021 | 21:00 UTC</span>
+        <span>Conversor de Moedas: Dólar para Real</span>
         <span>Dados de câmbio disponibilizados pela Morningstar.</span>
       </div>
     </HeaderContainer>
